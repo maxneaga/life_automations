@@ -20,7 +20,9 @@ public class SectetSanta {
         families.put("Family 5", new String[]{"Elaine", "Robert", "Wayne", "Jenny"});
 
         HashMap<String, String> pairs = generatePairs(families);
-        System.out.println(pairs);
+        pairs.forEach((key, value) -> {
+            System.out.println(key + "=>" + value);
+        });
     }
 
     private static HashMap<String, String> generatePairs(HashMap<String, String[]> families) {
